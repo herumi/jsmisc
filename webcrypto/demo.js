@@ -23,6 +23,11 @@ function generateKey() {
 	})
 }
 
+function generateIv() {
+	g_iv = getRandom(16)
+	get('iv').innerHTML = U8ArrayToHex(g_iv)
+}
+
 function enc() {
 	var msg = document.getElementsByName('msg')[0].value
 	encAES('encMsg', setStr, g_key, g_iv, msg)
