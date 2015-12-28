@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<title>Web Cryptography API demo</title>
+	<link rel="stylesheet" type="text/css" href="webcrypto.css">
+	<script type="text/javascript" src="../crypto.js"></script>
+	<script type="text/javascript" src="webcrypto.js"></script>
+</head>
+<body>
+<h1>Web Cryptography API demo</h1>
+
+<h2>Init</h2>
+<button type="button" onclick="generateKey()">Generate key</button>
+<div>key</div>
+<div id="key" class="ret">0</div>
+<button type="button" onclick="generateIv()">Generate iv</button>
+<div>iv</div>
+<div id="iv" class="ret">34c53e66b7bc2d8ddbb7504d9817a6db</div>
+<hr>
+
+<div id="left">
+<h2>Alice</h2>
+
+<input type="text" name="msg" value="hello">
+<button type="button" onclick="enc()">encrypt message and send</button>
+
+</div>
+
+<div id="middle">
+</div>
+
+<div id="right">
+<h2>Bob</h2>
+
+<div>encrypted message</div>
+<div id="encMsg" class="ret">0</div>
+<button type="button" onclick="dec()">decrypt message</button>
+<div>decrypted message</div>
+<div id="decMsg" class="ret">0</div>
+
+</div>
+
+</body>
+</html>
